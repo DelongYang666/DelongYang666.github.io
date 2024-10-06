@@ -1,11 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-<<<<<<< HEAD
-	"sourceRoot": "C:/github/DelongYang666.github.io",
-=======
 	"sourceRoot": "C:/github/DelongYang666-blog",
->>>>>>> 24bfa0c (Add a new post)
 	"sources": [
 		"ananke/css/main.css"
 	],

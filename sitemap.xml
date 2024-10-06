@@ -2,49 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-<<<<<<< HEAD
-    <loc>https://delongyang666.github.io/posts/my-first-post/</loc>
-    <lastmod>2024-10-03T17:21:15+08:00</lastmod>
+    <loc>https://delongyang666.github.io/post/my-first-post/</loc>
+    <lastmod>2024-10-06T17:01:08+08:00</lastmod>
   </url><url>
     <loc>https://delongyang666.github.io/</loc>
-    <lastmod>2024-10-03T17:21:15+08:00</lastmod>
+    <lastmod>2024-10-06T17:01:08+08:00</lastmod>
   </url><url>
-    <loc>https://delongyang666.github.io/posts/</loc>
-    <lastmod>2024-10-03T17:21:15+08:00</lastmod>
+    <loc>https://delongyang666.github.io/post/</loc>
+    <lastmod>2024-10-06T17:01:08+08:00</lastmod>
   </url><url>
     <loc>https://delongyang666.github.io/categories/</loc>
   </url><url>
     <loc>https://delongyang666.github.io/tags/</loc>
-=======
-    <loc>https://example.org/</loc>
-    <lastmod>2024-10-04T11:37:19+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2024-10-04T11:37:19+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/categories/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/categories/category/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/post/my-first-post/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/post/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/categories/subcategory/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/tag1/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/tag2/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/</loc>
-    <lastmod>2024-10-04T11:05:36+08:00</lastmod>
->>>>>>> 24bfa0c (Add a new post)
   </url>
 </urlset>
