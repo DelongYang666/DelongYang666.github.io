@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Delong Yang&#39;s personal blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2024 16:45:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2024 23:18:04 +0800</lastBuildDate>
     <atom:link href="https://delongyang666.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Process Data Before Training</title>
+      <link>https://delongyang666.github.io/post/how-to-process-data-before-training/</link>
+      <pubDate>Tue, 08 Oct 2024 23:18:04 +0800</pubDate>
+      <guid>https://delongyang666.github.io/post/how-to-process-data-before-training/</guid>
+      <description>&lt;h3 id=&#34;this-blog-is-suitable-for-someone-who-want-to-know-the-base-knowledge-of-how-to-process-data-before-training-it-will-combine-a-real-classification-task-of-to-explain-the-process&#34;&gt;This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process.&lt;/h3&gt;&#xA;&lt;h1 id=&#34;outline&#34;&gt;outline&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#1-accept-the-arguments-of-the-python-script-from-the-command-line&#34;&gt;1 accept the arguments of the python script from the command line&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#2-load-tokenizer&#34;&gt;2 load tokenizer&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#3-load-data&#34;&gt;3 load data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#4-convert-the-binary-data-to-alphabetic-data-of-labels&#34;&gt;4 convert the binary data to alphabetic data of labels&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#5-remove-excess-symbols-and-concatenate-data&#34;&gt;5 remove excess symbols and concatenate data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#6-write-data-into-dataframe&#34;&gt;6 write data into dataframe&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#7-split-5-fold-data&#34;&gt;7 split 5 fold data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#8-get-the-input-prompt&#34;&gt;8 get the input prompt&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#9-get-the-reverse-data&#34;&gt;9 get the reverse data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#10-save-the-data&#34;&gt;10 save the data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Words</title>
       <link>https://delongyang666.github.io/post/words/</link>

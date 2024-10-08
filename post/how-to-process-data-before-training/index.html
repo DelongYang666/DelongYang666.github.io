@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>How to Process Data Before Training | Delong Yang&#39;s personal blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process.
+outline
+
+1 accept the arguments of the python script from the command line
+2 load tokenizer
+3 load data
+4 convert the binary data to alphabetic data of labels
+5 remove excess symbols and concatenate data
+6 write data into dataframe
+7 split 5 fold data
+8 get the input prompt
+9 get the reverse data
+10 save the data
+">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://delongyang666.github.io/post/how-to-process-data-before-training/">
+    
+
+    <meta property="og:url" content="https://delongyang666.github.io/post/how-to-process-data-before-training/">
+  <meta property="og:site_name" content="Delong Yang&#39;s personal blog">
+  <meta property="og:title" content="How to Process Data Before Training">
+  <meta property="og:description" content="This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process. outline 1 accept the arguments of the python script from the command line 2 load tokenizer 3 load data 4 convert the binary data to alphabetic data of labels 5 remove excess symbols and concatenate data 6 write data into dataframe 7 split 5 fold data 8 get the input prompt 9 get the reverse data 10 save the data ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-10-08T23:18:04+08:00">
+    <meta property="article:modified_time" content="2024-10-08T23:18:04+08:00">
+
+  <meta itemprop="name" content="How to Process Data Before Training">
+  <meta itemprop="description" content="This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process. outline 1 accept the arguments of the python script from the command line 2 load tokenizer 3 load data 4 convert the binary data to alphabetic data of labels 5 remove excess symbols and concatenate data 6 write data into dataframe 7 split 5 fold data 8 get the input prompt 9 get the reverse data 10 save the data ">
+  <meta itemprop="datePublished" content="2024-10-08T23:18:04+08:00">
+  <meta itemprop="dateModified" content="2024-10-08T23:18:04+08:00">
+  <meta itemprop="wordCount" content="92">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Process Data Before Training">
+  <meta name="twitter:description" content="This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process. outline 1 accept the arguments of the python script from the command line 2 load tokenizer 3 load data 4 convert the binary data to alphabetic data of labels 5 remove excess symbols and concatenate data 6 write data into dataframe 7 split 5 fold data 8 get the input prompt 9 get the reverse data 10 save the data ">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Delong Yang&#39;s personal blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">How to Process Data Before Training</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-10-08T23:18:04+08:00">October 8, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="this-blog-is-suitable-for-someone-who-want-to-know-the-base-knowledge-of-how-to-process-data-before-training-it-will-combine-a-real-classification-task-of-to-explain-the-process">This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process.</h3>
+<h1 id="outline">outline</h1>
+<ul>
+<li><a href="#1-accept-the-arguments-of-the-python-script-from-the-command-line">1 accept the arguments of the python script from the command line</a></li>
+<li><a href="#2-load-tokenizer">2 load tokenizer</a></li>
+<li><a href="#3-load-data">3 load data</a></li>
+<li><a href="#4-convert-the-binary-data-to-alphabetic-data-of-labels">4 convert the binary data to alphabetic data of labels</a></li>
+<li><a href="#5-remove-excess-symbols-and-concatenate-data">5 remove excess symbols and concatenate data</a></li>
+<li><a href="#6-write-data-into-dataframe">6 write data into dataframe</a></li>
+<li><a href="#7-split-5-fold-data">7 split 5 fold data</a></li>
+<li><a href="#8-get-the-input-prompt">8 get the input prompt</a></li>
+<li><a href="#9-get-the-reverse-data">9 get the reverse data</a></li>
+<li><a href="#10-save-the-data">10 save the data</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://delongyang666.github.io/" >
+    &copy;  Delong Yang's personal blog 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
