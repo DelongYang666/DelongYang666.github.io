@@ -6,8 +6,15 @@
     <description>Recent content on Delong Yang&#39;s personal blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2024 10:28:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2024 10:23:30 +0800</lastBuildDate>
     <atom:link href="https://delongyang666.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Bash in Deep Learning</title>
+      <link>https://delongyang666.github.io/post/how-to-use-bash-in-deep-learning/</link>
+      <pubDate>Tue, 08 Oct 2024 10:23:30 +0800</pubDate>
+      <guid>https://delongyang666.github.io/post/how-to-use-bash-in-deep-learning/</guid>
+      <description>&lt;h3 id=&#34;this-blog-is-suitable-for-someone-who-want-to-use-bash-to-train-in-deep-learning-it-introduce-some-common-usage-of-bash&#34;&gt;This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash.&lt;/h3&gt;&#xA;&lt;h3 id=&#34;top&#34;&gt;top&lt;/h3&gt;&#xA;&lt;h1 id=&#34;outline&#34;&gt;outline&lt;/h1&gt;&#xA;&lt;p&gt;*&lt;a href=&#34;#1-how-to-run-bash-script&#34;&gt;1 how to run bash script&lt;/a&gt;&#xA;*&lt;a href=&#34;#2-how-to-run-python-script-in-bash-script&#34;&gt;2 how to run python script in bash script&lt;/a&gt;&#xA;*&lt;a href=&#34;#3-how-to-detect-the-error-and-stop-immediately&#34;&gt;3 how to detect the error and stop immediately&lt;/a&gt;&#xA;*&lt;a href=&#34;#4-how-to-print-parameters-to-debug-when-running-bash-script&#34;&gt;4 how to print parameters to debug when running bash script&lt;/a&gt;&#xA;*&lt;a href=&#34;#5-how-to-use-deepspped-to-start-training-in-bash-script&#34;&gt;5 how to use deepspped to start training in bash script&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to Blog With Markdown</title>
       <link>https://delongyang666.github.io/post/how-to-blog-with-markdown/</link>
