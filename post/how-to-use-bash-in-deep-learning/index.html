@@ -9,11 +9,16 @@
     <meta name="description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash.
 top
 outline
-*1 how to run bash script
-*2 how to run python script in bash script
-*3 how to detect the error and stop immediately
-*4 how to print parameters to debug when running bash script
-*5 how to use deepspped to start training in bash script">
+
+1 how to run bash script
+2 how to run python script in bash script
+3 how to detect the error and stop immediately
+4 how to print parameters to debug when running bash script
+5 how to use deepspped to start training in bash script
+
+1 how to run bash script
+to run a bash script, you should add #!/bin/bash in the first line of the script.
+&lsquo;#!/bin/bash&rsquo;">
     <meta name="generator" content="Hugo 0.135.0">
     
     
@@ -44,7 +49,7 @@ outline
     <meta property="og:url" content="https://delongyang666.github.io/post/how-to-use-bash-in-deep-learning/">
   <meta property="og:site_name" content="Delong Yang&#39;s personal blog">
   <meta property="og:title" content="How to Use Bash in Deep Learning">
-  <meta property="og:description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline *1 how to run bash script *2 how to run python script in bash script *3 how to detect the error and stop immediately *4 how to print parameters to debug when running bash script *5 how to use deepspped to start training in bash script">
+  <meta property="og:description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline 1 how to run bash script 2 how to run python script in bash script 3 how to detect the error and stop immediately 4 how to print parameters to debug when running bash script 5 how to use deepspped to start training in bash script 1 how to run bash script to run a bash script, you should add #!/bin/bash in the first line of the script. ‘#!/bin/bash’">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -52,13 +57,13 @@ outline
     <meta property="article:modified_time" content="2024-10-08T10:23:30+08:00">
 
   <meta itemprop="name" content="How to Use Bash in Deep Learning">
-  <meta itemprop="description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline *1 how to run bash script *2 how to run python script in bash script *3 how to detect the error and stop immediately *4 how to print parameters to debug when running bash script *5 how to use deepspped to start training in bash script">
+  <meta itemprop="description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline 1 how to run bash script 2 how to run python script in bash script 3 how to detect the error and stop immediately 4 how to print parameters to debug when running bash script 5 how to use deepspped to start training in bash script 1 how to run bash script to run a bash script, you should add #!/bin/bash in the first line of the script. ‘#!/bin/bash’">
   <meta itemprop="datePublished" content="2024-10-08T10:23:30+08:00">
   <meta itemprop="dateModified" content="2024-10-08T10:23:30+08:00">
   <meta itemprop="wordCount" content="247">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="How to Use Bash in Deep Learning">
-  <meta name="twitter:description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline *1 how to run bash script *2 how to run python script in bash script *3 how to detect the error and stop immediately *4 how to print parameters to debug when running bash script *5 how to use deepspped to start training in bash script">
+  <meta name="twitter:description" content="This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash. top outline 1 how to run bash script 2 how to run python script in bash script 3 how to detect the error and stop immediately 4 how to print parameters to debug when running bash script 5 how to use deepspped to start training in bash script 1 how to run bash script to run a bash script, you should add #!/bin/bash in the first line of the script. ‘#!/bin/bash’">
 
 	
   </head>
@@ -134,11 +139,13 @@ outline
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="this-blog-is-suitable-for-someone-who-want-to-use-bash-to-train-in-deep-learning-it-introduce-some-common-usage-of-bash">This blog is suitable for someone who want to use bash to train in deep learning. It introduce some common usage of bash.</h3>
 <h3 id="top">top</h3>
 <h1 id="outline">outline</h1>
-<p>*<a href="#1-how-to-run-bash-script">1 how to run bash script</a>
-*<a href="#2-how-to-run-python-script-in-bash-script">2 how to run python script in bash script</a>
-*<a href="#3-how-to-detect-the-error-and-stop-immediately">3 how to detect the error and stop immediately</a>
-*<a href="#4-how-to-print-parameters-to-debug-when-running-bash-script">4 how to print parameters to debug when running bash script</a>
-*<a href="#5-how-to-use-deepspped-to-start-training-in-bash-script">5 how to use deepspped to start training in bash script</a></p>
+<ul>
+<li><a href="#1-how-to-run-bash-script">1 how to run bash script</a></li>
+<li><a href="#2-how-to-run-python-script-in-bash-script">2 how to run python script in bash script</a></li>
+<li><a href="#3-how-to-detect-the-error-and-stop-immediately">3 how to detect the error and stop immediately</a></li>
+<li><a href="#4-how-to-print-parameters-to-debug-when-running-bash-script">4 how to print parameters to debug when running bash script</a></li>
+<li><a href="#5-how-to-use-deepspped-to-start-training-in-bash-script">5 how to use deepspped to start training in bash script</a></li>
+</ul>
 <h2 id="1-how-to-run-bash-script">1 how to run bash script</h2>
 <h3 id="to-run-a-bash-script-you-should-add-binbash-in-the-first-line-of-the-script">to run a bash script, you should add #!/bin/bash in the first line of the script.</h3>
 <p>&lsquo;#!/bin/bash&rsquo;</p>
