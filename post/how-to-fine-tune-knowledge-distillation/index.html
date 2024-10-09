@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>How to Fine Tune Knowledge Distillation | Delong Yang&#39;s personal blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This blog is suitable for someone who want to know how to fine tune knowledge distillation.
+outline
+
+1 judge if the distributed environment has been deployed
+2 configure the training parameters for deep learning
+3 group the parameters of a model for optimization
+4 set for debugging and logging purposes
+5 transfer each value in the batch to the specified device
+6 set the random seed for various libraries and components
+7 create a dataset for a specific task
+8 perform the training process
+9 save the data
+10 parse command-line arguments
+* 11 ensures that the main function is executed directly when the script is run and not imported as a module for another script
+">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://delongyang666.github.io/post/how-to-fine-tune-knowledge-distillation/">
+    
+
+    <meta property="og:url" content="https://delongyang666.github.io/post/how-to-fine-tune-knowledge-distillation/">
+  <meta property="og:site_name" content="Delong Yang&#39;s personal blog">
+  <meta property="og:title" content="How to Fine Tune Knowledge Distillation">
+  <meta property="og:description" content="This blog is suitable for someone who want to know how to fine tune knowledge distillation. outline 1 judge if the distributed environment has been deployed 2 configure the training parameters for deep learning 3 group the parameters of a model for optimization 4 set for debugging and logging purposes 5 transfer each value in the batch to the specified device 6 set the random seed for various libraries and components 7 create a dataset for a specific task 8 perform the training process 9 save the data 10 parse command-line arguments * 11 ensures that the main function is executed directly when the script is run and not imported as a module for another script ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-10-09T18:08:22+08:00">
+    <meta property="article:modified_time" content="2024-10-09T18:08:22+08:00">
+
+  <meta itemprop="name" content="How to Fine Tune Knowledge Distillation">
+  <meta itemprop="description" content="This blog is suitable for someone who want to know how to fine tune knowledge distillation. outline 1 judge if the distributed environment has been deployed 2 configure the training parameters for deep learning 3 group the parameters of a model for optimization 4 set for debugging and logging purposes 5 transfer each value in the batch to the specified device 6 set the random seed for various libraries and components 7 create a dataset for a specific task 8 perform the training process 9 save the data 10 parse command-line arguments * 11 ensures that the main function is executed directly when the script is run and not imported as a module for another script ">
+  <meta itemprop="datePublished" content="2024-10-09T18:08:22+08:00">
+  <meta itemprop="dateModified" content="2024-10-09T18:08:22+08:00">
+  <meta itemprop="wordCount" content="116">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Fine Tune Knowledge Distillation">
+  <meta name="twitter:description" content="This blog is suitable for someone who want to know how to fine tune knowledge distillation. outline 1 judge if the distributed environment has been deployed 2 configure the training parameters for deep learning 3 group the parameters of a model for optimization 4 set for debugging and logging purposes 5 transfer each value in the batch to the specified device 6 set the random seed for various libraries and components 7 create a dataset for a specific task 8 perform the training process 9 save the data 10 parse command-line arguments * 11 ensures that the main function is executed directly when the script is run and not imported as a module for another script ">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Delong Yang&#39;s personal blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">How to Fine Tune Knowledge Distillation</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-10-09T18:08:22+08:00">October 9, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="this-blog-is-suitable-for-someone-who-want-to-know-how-to-fine-tune-knowledge-distillation">This blog is suitable for someone who want to know how to fine tune knowledge distillation.</h3>
+<h1 id="outline">outline</h1>
+<ul>
+<li><a href="#1-judge-if-the-distributed-environment-has-been-deployed">1 judge if the distributed environment has been deployed</a></li>
+<li><a href="#2-configure-the-training-parameters-for-deep-learning">2 configure the training parameters for deep learning</a></li>
+<li><a href="#3-group-the-parameters-of-a-model-for-optimization">3 group the parameters of a model for optimization</a></li>
+<li><a href="#4-set-for-debugging-and-logging-purposes">4 set for debugging and logging purposes</a></li>
+<li><a href="#5-transfer-each-value-in-the-batch-to-the-specified-device">5 transfer each value in the batch to the specified device</a></li>
+<li><a href="#6-set-the-random-seed-for-various-libraries-and-components">6 set the random seed for various libraries and components</a></li>
+<li><a href="#7-create-a-dataset-for-a-specific-task">7 create a dataset for a specific task</a></li>
+<li><a href="8-perform-the-training-process">8 perform the training process</a></li>
+<li><a href="#9-save-the-data">9 save the data</a></li>
+<li><a href="#10-parse-command-line-arguments">10 parse command-line arguments</a>
+*<a href="#11-ensures-that-the-main-function-is-executed-directly-when-the-script-is-run-and-not-imported-as-a-module-for-another-script"> 11 ensures that the main function is executed directly when the script is run and not imported as a module for another script</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://delongyang666.github.io/" >
+    &copy;  Delong Yang's personal blog 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

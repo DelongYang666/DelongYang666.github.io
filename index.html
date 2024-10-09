@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Delong Yang&#39;s personal blog">
-  <meta itemprop="datePublished" content="2024-10-09T10:18:14+08:00">
-  <meta itemprop="dateModified" content="2024-10-09T10:18:14+08:00">
+  <meta itemprop="datePublished" content="2024-10-09T20:53:17+08:00">
+  <meta itemprop="dateModified" content="2024-10-09T20:53:17+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Delong Yang&#39;s personal blog">
 
@@ -127,27 +127,25 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/how-to-train/" class="color-inherit dim link">
-            How to Train
+          <a href="/post/how-to-predict-test/" class="color-inherit dim link">
+            How to Predict Test
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h3 id="this-blog-is-suitable-for-someone-who-want-to-know-about-the-process-of-training">This blog is suitable for someone who want to know about the process of training.</h3>
+          <h1 id="this-blog-is-suitable-for-someone-who-want-to-know-how-to-predict-test">This blog is suitable for someone who want to know how to predict test.</h1>
 <h1 id="outline">outline</h1>
 <ul>
-<li><a href="#1-judge-if-the-distributed-environment-has-been-deployed">1 judge if the distributed environment has been deployed</a></li>
-<li><a href="#2-configure-the-training-parameters-for-deep-learning">2 configure the training parameters for deep learning</a></li>
-<li><a href="#3-group-the-parameters-of-a-model-for-optimization">3 group the parameters of a model for optimization</a></li>
-<li><a href="#4-set-for-debugging-and-logging-purposes">4 set for debugging and logging purposes</a></li>
-<li><a href="#5-transfer-each-value-in-the-batch-to-the-specified-device">5 transfer each value in the batch to the specified device</a></li>
-<li><a href="#6-set-the-random-seed-for-various-libraries-and-components">6 set the random seed for various libraries and components</a></li>
-<li><a href="#7-complete-implementation-of-the-training-process-for-a-sequence-classification-model">7 complete implementation of the training process for a sequence classification model</a></li>
-<li><a href="#8-save-a-trained-model-and-its-tokenizer-to-a-specified-directory">8 save a trained model and its tokenizer to a specified directory</a></li>
-<li><a href="#9-parse-command-line-arguments">9 parse command-line arguments</a></li>
-<li><a href="#10-ensures-that-the-main-function-is-executed-directly-when-the-script-is-run-and-not-imported-as-a-module-for-another-script">10 ensures that the main function is executed directly when the script is run and not imported as a module for another script</a></li>
+<li><a href="#1-data-preprocessing">1 data preprocessing</a></li>
+<li><a href="#2-creating-prompts">2 creating prompts</a></li>
+<li><a href="#3-tokenization">3 tokenization</a></li>
+<li><a href="#4-model-initialization">4 model initialization</a></li>
+<li><a href="#5-inference">5 inference</a></li>
+<li><a href="#6-parallel-inference">6 parallel inference</a></li>
+<li><a href="#7-result-aggregation">7 result aggregation</a></li>
+<li><a href="#8-submission-file-generation">8 submission file generation</a></li>
 </ul>
         </div>
-          <a href="/post/how-to-train/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/post/how-to-predict-test/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -164,27 +162,25 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/how-to-process-data-before-training/" class="color-inherit dim link">
-            How to Process Data Before Training
+          <a href="/post/how-to-run-gptq/" class="color-inherit dim link">
+            How to Run Gptq
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h3 id="this-blog-is-suitable-for-someone-who-want-to-know-the-base-knowledge-of-how-to-process-data-before-training-it-will-combine-a-real-classification-task-of-to-explain-the-process">This blog is suitable for someone who want to know the base knowledge of how to process data before training. It will combine a real classification task of to explain the process.</h3>
+          <h3 id="this-blog-is-suitable-for-someone-who-want-to-know-how-to-run-gptq">This blog is suitable for someone who want to know how to run gptq.</h3>
 <h1 id="outline">outline</h1>
 <ul>
-<li><a href="#1-accept-the-arguments-of-the-python-script-from-the-command-line">1 accept the arguments of the python script from the command line</a></li>
-<li><a href="#2-load-tokenizer">2 load tokenizer</a></li>
-<li><a href="#3-load-data">3 load data</a></li>
-<li><a href="#4-convert-the-binary-data-to-alphabetic-data-of-labels">4 convert the binary data to alphabetic data of labels</a></li>
-<li><a href="#5-remove-excess-symbols-and-concatenate-data">5 remove excess symbols and concatenate data</a></li>
-<li><a href="#6-write-data-into-dataframe">6 write data into dataframe</a></li>
-<li><a href="#7-split-5-fold-data">7 split 5 fold data</a></li>
-<li><a href="#8-get-the-input-prompt">8 get the input prompt</a></li>
-<li><a href="#9-get-the-reverse-data">9 get the reverse data</a></li>
-<li><a href="#10-save-the-data">10 save the data</a></li>
+<li><a href="#1-load-the-model">1 load the model</a></li>
+<li><a href="#2-transfer-the-model-and-tokenizer-to-gpu">2 transfer the model and tokenizer to gpu</a></li>
+<li><a href="#3-logging">3 logging</a></li>
+<li><a href="#4-build-dataset">4 build dataset</a></li>
+<li><a href="#5-configure-the-gptq-parameters">5 configure the gptq parameters</a></li>
+<li><a href="#6-configure-the-quantize-parameters">6 configure the quantize parameters</a></li>
+<li><a href="#7-perform-quantization">7 perform quantization</a></li>
+<li><a href="#8-save-the-result">8 save the result</a></li>
 </ul>
         </div>
-          <a href="/post/how-to-process-data-before-training/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/post/how-to-run-gptq/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -201,25 +197,20 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/words/" class="color-inherit dim link">
-            Words
+          <a href="/post/how-to-merge-lora/" class="color-inherit dim link">
+            How to Merge Lora
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h3 id="-----------------------------------------------------">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</h3>
-<h4 id="truncate截断v-yield产出v-yield-to让步于-slice切片n">truncate截断v. yield产出v. yield to让步于 slice切片n.</h4>
-<h4 id="placeholder占位符n-iterate-over迭代-breakdown分解n">placeholder占位符n. iterate over迭代 breakdown分解n.</h4>
-<h4 id="encode编码v-decode解码v-debug调试v-snippet代码段n">encode编码v. decode解码v. debug调试v. snippet代码段n.</h4>
-<h4 id="ternary-operator三元运算符n-be-derived-from源于">ternary operator三元运算符n. be derived from&hellip;源于&hellip;</h4>
-<h4 id="distinct截然不同的adj-be-retained-in保留在中">distinct截然不同的adj. be retained in&hellip;保留在&hellip;中</h4>
-<h4 id="be-flipped-in翻转在中-concatenate连接v-reversal反转n">be flipped in&hellip;翻转在&hellip;中 concatenate连接v. reversal反转n.</h4>
-<h4 id="2024108">2024.10.8</h4>
-<h4 id="coordinate坐标n-offload卸载v-prefetching预取n-threshold阈值n">coordinate坐标n. offload卸载v. prefetching预取n. threshold阈值n.</h4>
-<h4 id="precision精度n-nontrainable不可训练的adj-partition分区n">precision精度n. nontrainable不可训练的adj. partition分区n.</h4>
-<h4 id="clip裁剪v-pre-scaling预缩放n-hybrid混合的adj-facilitate促进v">clip裁剪v. pre-scaling预缩放n. hybrid混合的adj. facilitate促进v.</h4>
-<h4 id="custom自定义的adj-retrieval检索n-collate核对v-format格式n">custom自定义的adj. retrieval检索n. collate核对v. format格式n.</h4>
+          <h3 id="this-blog-is-suitable-for-someone-who-want-to-know-how-to-merge-lora">This blog is suitable for someone who want to know how to merge lora.</h3>
+<h1 id="outline">outline</h1>
+<ul>
+<li><a href="#1-load-the-adapter">1 load the adapter</a></li>
+<li><a href="#2-merge-lora">2 merge lora</a></li>
+<li><a href="#3-save-the-result">3 save the result</a></li>
+</ul>
         </div>
-          <a href="/post/words/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/post/how-to-merge-lora/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -236,20 +227,26 @@
           
           
             <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/post/how-to-use-bash-in-deep-learning/" class="link black dim">
-                How to Use Bash in Deep Learning
+              <a href="/post/how-to-fine-tune-knowledge-distillation/" class="link black dim">
+                How to Fine Tune Knowledge Distillation
               </a>
             </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/post/how-to-blog-with-markdown/" class="link black dim">
-                How to Blog With Markdown
+              <a href="/post/how-to-merge-logits/" class="link black dim">
+                How to Merge Logits
               </a>
             </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/post/my-first-post/" class="link black dim">
-                How To Blog On Github From Zero With Hugo And Github Pages
+              <a href="/post/how-to-predict/" class="link black dim">
+                How to Predict
+              </a>
+            </h2>
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/post/how-to-train/" class="link black dim">
+                How to Train
               </a>
             </h2>
           
